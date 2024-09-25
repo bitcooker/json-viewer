@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# JSON Tree Viewer
 
-## Getting Started
+A React/Next.js and TypeScript-based application that renders any valid JSON structure as a collapsible tree. The application supports expanding and collapsing JSON objects and arrays, and allows users to copy the JSON path of any property to the clipboard.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Collapsible Tree Structure**: Any object or array can be expanded or collapsed. The root object is expanded by default, while child properties are collapsed.
+- **Copy JSON Path**: Easily copy the "json path" of any property with a single click on the "create column" button.
+- **State Persistence**: Nested properties retain their expanded/collapsed state even when their parent properties are toggled.
+- **Responsive Design**: A clean and responsive UI following provided designs.
+- **Bonus Animations**: Smooth transitions for expanding and collapsing tree nodes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technical Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: React/Next.js, TypeScript
+- **State Management**: Zustand
+- **Icons**: [Tabler Icons](https://tabler.io/icons)
+- **UI Framework**: [Mantine](https://mantine.dev)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Run the Project
 
-## Learn More
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/bitcooker/json-viewer.git
+   cd json-viewer
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+   The application should now be running on `http://localhost:3000`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run the app in production mode**:
+   ```bash
+   npm run build
+   npm start
+   ```
 
-## Deploy on Vercel
+## How to Use
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Input JSON**: Paste your JSON in the textbox on the left side.
+- **View JSON**: The structured JSON will be displayed in a tree format on the right.
+- **Expand/Collapse**: Click on any object or array to expand or collapse its children.
+- **Copy Path**: Click the "create column" button next to any property to copy its JSON path.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Demo
+
+You can check out the live version of this project [here](https://json-viewer-technical-test.vercel.app/).
+
+## Design & Prototype
+
+- **Design**: [Figma Design](https://www.figma.com/design/1wBUumrJAslNcgpPCY4ZvD/FE-Challenge-%5BDesigns%5D?node-id=0-1&t=6CAVxiIVGN8tRyem-1)
+- **Prototype**: [Figma Prototype](https://www.figma.com/proto/1wBUumrJAslNcgpPCY4ZvD/FE-Challenge-%5BDesigns%5D?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=-3797%2C-191%2C1.88&t=QDudUfymdbKWqhWj-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1)
+
+## Deployment
+
+This project can be easily deployed on Vercel, Netlify, or Render. Follow their respective documentation for details on deploying React projects.
